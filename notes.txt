@@ -1,7 +1,48 @@
+constant
+reducer
+add reducer to store
+action:
+ dispatch the action
+  reducer
+
+dispatch means run
+
+
+
 USE EFFECT:
 If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) 
 as a second argument. This tells React that your effect doesn’t depend on any values from props or state, so it
  never needs to re-run. This isn’t handled as a special case — it follows directly from how the dependencies array 
  always works.
  While passing [] as the second argument is closer to the familiar componentDidMount
+
+Props
+    .MATCH
+    // match is from (URL)
+    A match object contains information about how a <Route path> matched the URL. match objects contain the following properties:
+    params - (object) Key/value pairs parsed from the URL corresponding to the dynamic segments of the path
+    isExact - (boolean) true if the entire URL was matched (no trailing characters)
+    path - (string) The path pattern used to match. Useful for building nested <Route>s
+    url - (string) The matched portion of the URL. Useful for building nested <Link>s
+
+
+    .HISTORY
+    https://reactrouter.com/web/api/history
+    push(path, [state]) - (function) Pushes a new entry onto the history stack
+
+    .LOCATION
+    shows whatevers after the ? in url
+
+
+
+Making a params in url optional
+"/cart/:id?"
+ the ? makes it optional
+
+getState: get all the reducers(in store.js)
+
+
+
+
+
 
