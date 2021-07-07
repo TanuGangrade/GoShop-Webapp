@@ -6,6 +6,10 @@ import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
+import LoginScreen from './screens/LoginScreen'
+import RegisterScreen from './screens/RegisterScreen'
+import ProfileScreen from './screens/ProfileScreen'
+
 
 export const App = () => {
   return (
@@ -13,6 +17,10 @@ export const App = () => {
     <Header/>
     <main className="py-3 mt-5">
     <Container>
+      <Route path='/login' component={LoginScreen} />
+      <Route path='/register' component={RegisterScreen} />
+      <Route path='/profile' component={ProfileScreen} />
+
       <Route exact path='/' component={HomeScreen}/>
       <Route exact path='/product/:id' component={ProductScreen}/>
       <Route exact path='/cart/:id?' component={CartScreen}/>
