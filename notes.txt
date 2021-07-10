@@ -8,7 +8,7 @@ action:
 dispatch means run
 
 
-
+payload is the data we pass in from the form
 
 ->USE EFFECT:
   If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) 
