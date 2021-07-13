@@ -7,6 +7,10 @@ action:
 
 dispatch means run
 
+->the combineReducers has an object of functions. these functions run whenever dispatch is called and the return value becomes the apps new state
+  we use store to access the state
+  we access the state using getState()
+
 
 payload is the data we pass in from the form
 
@@ -32,7 +36,8 @@ payload is the data we pass in from the form
     push(path, [state]) - (function) Pushes a new entry onto the history stack
 
     .LOCATION
-    shows whatevers after the ? in url
+    shows whatevers after the history
+    https://stackoverflow.com/questions/44121069/how-to-pass-params-with-history-push-link-redirect-in-react-router-v4
 
 
 

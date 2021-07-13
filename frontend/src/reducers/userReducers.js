@@ -2,6 +2,7 @@
 import {
   USER_DETAILS_FAIL,
   USER_DETAILS_REQUEST,
+  USER_DETAILS_RESET,
   USER_DETAILS_SUCCESS,
   USER_LOGIN_FAIL,
   USER_LOGIN_REQUEST,
@@ -53,6 +54,8 @@ import {
         return { loading: false, user: action.payload }
       case USER_DETAILS_FAIL:
         return { loading: false, error: action.payload }
+      case USER_DETAILS_RESET:
+        return {user:{}}
       default:
         return state
     }
