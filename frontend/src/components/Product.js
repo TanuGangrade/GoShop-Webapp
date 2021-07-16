@@ -8,7 +8,7 @@ const Product = ({ product }) => {
   return (
     <Card className='my-3 p-3 rounded' style={{height:"95%"}}>
        <Link to={`/product/${product._id}`}>   {/*props.product._id but we destructure in function argumet */}
-        <Card.Img src={product.image} variant='top' />
+        <Card.Img src={product.image} variant='top' style={{width: "100%", height: "15vw",objectFit:" cover"}} />
       </Link>
 
       <Card.Body >

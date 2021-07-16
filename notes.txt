@@ -49,6 +49,9 @@ payload is the data we pass in from the form
 
 ->we useDispatch(action) and useSelector to get anything form the redux state
 
+->Multer for file upload
+
+->need to make forlder static so it gets loaded in the browser
 
 
 
