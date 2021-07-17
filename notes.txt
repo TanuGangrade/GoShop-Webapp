@@ -53,5 +53,6 @@ payload is the data we pass in from the form
 
 ->need to make forlder static so it gets loaded in the browser
 
+->req.query gives whats after ? in url
 
 

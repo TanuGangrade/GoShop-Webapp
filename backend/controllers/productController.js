@@ -3,16 +3,31 @@ import Product from '../models/productModel.js'
 
 
 const getProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({})
+  
+  const pageSize = 6
+  const page = Number(req.query.pageNumber) || 1
+  
+  
+  const keyword = req.query.keyword
+    ? {
+        name: {
+          $regex: req.query.keyword,// we do this so we dont have to type whole product name for it to show
+          $options: 'i', // this means case insensitive
+        },
+      } : {}
 
-  res.json(products)
-})
+      const count = await Product.countDocuments({ ...keyword })
+      const products = await Product.find({ ...keyword }).limit(pageSize).skip(pageSize * (page - 1))
+
+
+      res.json({ products, page, pages: Math.ceil(count / pageSize) })})
 
 const getProductById = asyncHandler(async (req, res) => {
+
   const product = await Product.findById(req.params.id)
 
   if (product) {
-    res.json(product)
+    res.json({ products, page, pages: Math.ceil(count / pageSize) })
   } else {
     res.status(404)
     throw new Error('Product not found')
